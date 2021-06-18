@@ -1,19 +1,19 @@
 //
-//  AddTodoViewController.m
+//  EYAddTodoViewController.m
 //  myTodoList
 //
 //  Created by bytedance on 2021/6/16.
 //
 
-#import "AddTodoViewController.h"
+#import "EYAddTodoViewController.h"
 
-@interface AddTodoViewController ()
+@interface EYAddTodoViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *todoContent;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 
 @end
 
-@implementation AddTodoViewController
+@implementation EYAddTodoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,9 +36,9 @@
 -(void)addClick
 {
     //判断代理是否响应
-    if([self.delegate respondsToSelector:@selector(addTodo:withTodo:)])
+    if ([self.delegate respondsToSelector:@selector(addTodo:withTodo:)])
     {
-        TodoItem *todoItem = [[TodoItem alloc] init];
+        EYTodoItem *todoItem = [[EYTodoItem alloc] init];
         todoItem.todo = self.todoContent.text;
         [self.delegate addTodo:self withTodo:todoItem];
     }

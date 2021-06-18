@@ -1,5 +1,5 @@
 //
-//  TodoItem.h
+//  EYTodoItem.h
 //  myTodoList
 //
 //  Created by bytedance on 2021/6/16.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TodoItem : NSObject
+@interface EYTodoItem : NSObject
 
 @property (nonatomic, copy) NSString *todo;
 
